@@ -1,0 +1,96 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="~/Assets/css/UserStyle.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="viewport" content="width=device-width" />
+    <title>profile_user</title>
+</head>
+<body>
+    <input  type="hidden" id="Token" value=@TempData["TokenID"] />
+    <div class="AdminChatWindow" id="ChatWindow">
+        <div class="container d-flex justify-content-center">
+           
+            <div class="card mt-5">
+                <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
+                    <button type="button" class="close" onclick="closeChatWindow()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </button> <span class="pb-3">گفت و گو با اپراتور</span> 
+                    </br>
+                </div>
+                <div class="main" id="main">
+                    @{ foreach (var item in Model)
+                        {
+                            if (item.Type_ == 0)
+                            {
+                                        <div class="User-chat">
+                                            <div class=" d-flex flex-row p-3" >
+                                                <div class="DateTime">
+                                                    @item.Time_ , @item.Date_
+                                                </div>
+                                                <div class="bg-white mr-2 p-3">
+
+                                                    @item.MSG
+
+
+
+                                                </div> <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30">
+
+                                            </div>
+                                        </div><br />
+                            }
+                            else
+                            {
+                <div class="Admin-chat">
+                    <div class="d-flex flex-row p-3">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30">
+                        <div class="chat ml-2 p-3">
+                            @item.MSG
+                        </div>
+                        <div class="DateTime">
+                            @item.Time_ , @item.Date_
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                            }
+
+                        }
+                    }
+
+
+
+
+
+                </div>
+
+
+                    <div class="form-group px-3"> <textarea id="txtMessage" class="form-control" rows="5" placeholder="Type your message"></textarea> </div>
+                    <input  id="btnSendMessage" type="button" value="بفرست" />
+                </div>
+            </div>
+        </div>
+   
+
+    <div class="ChatIcon" id="Chatbtn">
+        <img src="~/Assets/img/ChatIcon.png" onclick="openChatWindow()">
+    </div>
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/Assets/js/UserScript.js"></script>
+</body>
+</html>

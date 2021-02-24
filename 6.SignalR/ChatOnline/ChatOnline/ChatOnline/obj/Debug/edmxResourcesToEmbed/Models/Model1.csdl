@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChatOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Mes_ID" />
+    </Key>
+    <Property Name="Mes_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="AdminID" Type="Int32" />
+    <Property Name="MSG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Time_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Date_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Type_" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User_Access">
+    <Key>
+      <PropertyRef Name="A_ID" />
+    </Key>
+    <Property Name="A_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TokenID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Access" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User_Info">
+    <Key>
+      <PropertyRef Name="U_ID" />
+    </Key>
+    <Property Name="U_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username_" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="password_" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TokenID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ChatOnlineEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="User_Access" EntityType="Self.User_Access" />
+    <EntitySet Name="User_Info" EntityType="Self.User_Info" />
+  </EntityContainer>
+</Schema>
