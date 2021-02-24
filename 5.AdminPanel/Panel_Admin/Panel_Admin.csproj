@@ -1,0 +1,1118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37501205-C752-4BB4-858F-C4B1F70BBE49}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Panel_Admin</RootNamespace>
+    <AssemblyName>Panel_Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44372</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\dist\css\animate.css" />
+    <Content Include="Assets\dist\css\fancy-buttons.css" />
+    <Content Include="Assets\dist\css\filter.css" />
+    <Content Include="Assets\dist\css\font-awesome.min.css" />
+    <Content Include="Assets\dist\css\lightgallery.css" />
+    <Content Include="Assets\dist\css\linea-icon.css" />
+    <Content Include="Assets\dist\css\material-design-iconic-font.min.css" />
+    <Content Include="Assets\dist\css\pe-icon-7-stroke.css" />
+    <Content Include="Assets\dist\css\pe-icon-7-styles.css" />
+    <Content Include="Assets\dist\css\simple-line-icons.css" />
+    <Content Include="Assets\dist\css\style.css" />
+    <Content Include="Assets\dist\css\themify-icons.css" />
+    <Content Include="Assets\dist\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Assets\dist\fonts\lg\lg.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-arrows-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-elaboration-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-ecommerce-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-music-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-software-10.svg" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-weather-10.svg" />
+    <Content Include="Assets\dist\fonts\material-design-iconic-font\Material-Design-Iconic-Font.svg" />
+    <Content Include="Assets\dist\fonts\pe-icon-7\Pe-icon-7-stroke.svg" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Icons4c82.svg" />
+    <Content Include="Assets\dist\fonts\themify-icons\themify.svg" />
+    <Content Include="Assets\dist\img\1-s.png" />
+    <Content Include="Assets\dist\img\2-s.png" />
+    <Content Include="Assets\dist\img\3-s.png" />
+    <Content Include="Assets\dist\img\4-s.png" />
+    <Content Include="Assets\dist\img\avatar.jpg" />
+    <Content Include="Assets\dist\img\big\circle.jpg" />
+    <Content Include="Assets\dist\img\big\img1.jpg" />
+    <Content Include="Assets\dist\img\big\img2.jpg" />
+    <Content Include="Assets\dist\img\big\img3.jpg" />
+    <Content Include="Assets\dist\img\big\img4.jpg" />
+    <Content Include="Assets\dist\img\big\img5.jpg" />
+    <Content Include="Assets\dist\img\big\img6.jpg" />
+    <Content Include="Assets\dist\img\chair.jpg" />
+    <Content Include="Assets\dist\img\chair2 %281%29.jpg" />
+    <Content Include="Assets\dist\img\chair2.jpg" />
+    <Content Include="Assets\dist\img\chair3.jpg" />
+    <Content Include="Assets\dist\img\chair4.jpg" />
+    <Content Include="Assets\dist\img\country\01-flag.png" />
+    <Content Include="Assets\dist\img\country\02-flag.png" />
+    <Content Include="Assets\dist\img\country\03-flag.png" />
+    <Content Include="Assets\dist\img\country\04-flag.png" />
+    <Content Include="Assets\dist\img\country\05-flag.png" />
+    <Content Include="Assets\dist\img\country\06-flag.png" />
+    <Content Include="Assets\dist\img\country\07-flag.png" />
+    <Content Include="Assets\dist\img\cropper.jpg" />
+    <Content Include="Assets\dist\img\errorbg.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock1.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock2.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock3.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock4.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock5.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock6.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock7.jpg" />
+    <Content Include="Assets\dist\img\gallery\equal-size\mock8.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock1.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock2.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock3.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock4.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock5.jpg" />
+    <Content Include="Assets\dist\img\gallery\mock6.jpg" />
+    <Content Include="Assets\dist\img\heading-bg\slide1.jpg" />
+    <Content Include="Assets\dist\img\heading-bg\slide2.jpg" />
+    <Content Include="Assets\dist\img\heading-bg\slide3.jpg" />
+    <Content Include="Assets\dist\img\heading-bg\slide4.jpg" />
+    <Content Include="Assets\dist\img\heading-bg\slide6.jpg" />
+    <Content Include="Assets\dist\img\logo.png" />
+    <Content Include="Assets\dist\img\mock1.jpg" />
+    <Content Include="Assets\dist\img\modals\model.png" />
+    <Content Include="Assets\dist\img\modals\model2.png" />
+    <Content Include="Assets\dist\img\modals\model3.png" />
+    <Content Include="Assets\dist\img\range\sprite-skin-modern.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert2.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert3.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert4.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert5.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert6.png" />
+    <Content Include="Assets\dist\img\sweetalert\alert7.png" />
+    <Content Include="Assets\dist\img\thumb-1.jpg" />
+    <Content Include="Assets\dist\img\thumb-2.jpg" />
+    <Content Include="Assets\dist\img\thumb-3.jpg" />
+    <Content Include="Assets\dist\img\user.png" />
+    <Content Include="Assets\dist\img\user1.png" />
+    <Content Include="Assets\dist\img\user2.png" />
+    <Content Include="Assets\dist\img\user3.png" />
+    <Content Include="Assets\dist\img\user4.png" />
+    <Content Include="Assets\dist\js\bootstrap-table-data.js" />
+    <Content Include="Assets\dist\js\bootstrap-wysuhtml5-data.js" />
+    <Content Include="Assets\dist\js\chartist-data.js" />
+    <Content Include="Assets\dist\js\chartjs-data.js" />
+    <Content Include="Assets\dist\js\cropperjs-data.js" />
+    <Content Include="Assets\dist\js\dashboard-data.js" />
+    <Content Include="Assets\dist\js\dashboard2-data.js" />
+    <Content Include="Assets\dist\js\dashboard3-data.js" />
+    <Content Include="Assets\dist\js\dataTables-data.js" />
+    <Content Include="Assets\dist\js\db.js" />
+    <Content Include="Assets\dist\js\dropdown-bootstrap-extended.js" />
+    <Content Include="Assets\dist\js\dropzone-data.js" />
+    <Content Include="Assets\dist\js\easypiechart-data.js" />
+    <Content Include="Assets\dist\js\ecommerce-data.js" />
+    <Content Include="Assets\dist\js\editable-table-data.js" />
+    <Content Include="Assets\dist\js\export-table-data.js" />
+    <Content Include="Assets\dist\js\flot-data.js" />
+    <Content Include="Assets\dist\js\footable-data.js" />
+    <Content Include="Assets\dist\js\form-advance-data.js" />
+    <Content Include="Assets\dist\js\form-file-upload-data.js" />
+    <Content Include="Assets\dist\js\form-picker-data.js" />
+    <Content Include="Assets\dist\js\form-wizard-data.js" />
+    <Content Include="Assets\dist\js\form-xeditable-data.js" />
+    <Content Include="Assets\dist\js\froogaloop2.min.js" />
+    <Content Include="Assets\dist\js\fullcalendar-data.js" />
+    <Content Include="Assets\dist\js\gallery-data.js" />
+    <Content Include="Assets\dist\js\gmap-data.js" />
+    <Content Include="Assets\dist\js\init.js" />
+    <Content Include="Assets\dist\js\isotope.js" />
+    <Content Include="Assets\dist\js\jquery.slimscroll.js" />
+    <Content Include="Assets\dist\js\jsgrid-data.js" />
+    <Content Include="Assets\dist\js\lightgallery-all.js" />
+    <Content Include="Assets\dist\js\modal-data.js" />
+    <Content Include="Assets\dist\js\morris-data.js" />
+    <Content Include="Assets\dist\js\nestable-data.js" />
+    <Content Include="Assets\dist\js\owl-data.js" />
+    <Content Include="Assets\dist\js\peity-data.js" />
+    <Content Include="Assets\dist\js\product-cart-data.js" />
+    <Content Include="Assets\dist\js\product-checkout-data.js" />
+    <Content Include="Assets\dist\js\product-detail-data.js" />
+    <Content Include="Assets\dist\js\productorders-data.js" />
+    <Content Include="Assets\dist\js\rangeslider-data.js" />
+    <Content Include="Assets\dist\js\responsive-datatable-data.js" />
+    <Content Include="Assets\dist\js\simpleweather-data.js" />
+    <Content Include="Assets\dist\js\skills-counter-data.js" />
+    <Content Include="Assets\dist\js\sparkline-data.js" />
+    <Content Include="Assets\dist\js\spectragram.min.js" />
+    <Content Include="Assets\dist\js\starrr.js" />
+    <Content Include="Assets\dist\js\summernote-data.js" />
+    <Content Include="Assets\dist\js\sweetalert-data.js" />
+    <Content Include="Assets\dist\js\tinymce-data.js" />
+    <Content Include="Assets\dist\js\toast-data.js" />
+    <Content Include="Assets\dist\js\treeview-data.js" />
+    <Content Include="Assets\dist\js\typeahead-js-data.js" />
+    <Content Include="Assets\dist\js\vectormap-data.js" />
+    <Content Include="Assets\dist\js\widgets-data.js" />
+    <Content Include="Assets\vendors\bower_components\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-select\dist\css\bootstrap-select.min.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-select\dist\js\bootstrap-select.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-switch\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-switch\dist\js\bootstrap-switch.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-table\dist\bootstrap-table.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-table\dist\bootstrap-table.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-tagsinput\dist\bootstrap-tagsinput.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-tagsinput\dist\bootstrap-tagsinput.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-treeview\dist\bootstrap-treeview.min.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-treeview\dist\bootstrap-treeview.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap-validator\dist\validator.min.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap3-wysihtml5-bower\dist\bootstrap3-wysihtml5.all.js" />
+    <Content Include="Assets\vendors\bower_components\bootstrap3-wysihtml5-bower\dist\bootstrap3-wysihtml5.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\dist\css\bootstrap.css" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\vendors\bower_components\chartist\dist\chartist.min.css" />
+    <Content Include="Assets\vendors\bower_components\chartist\dist\chartist.min.js" />
+    <Content Include="Assets\vendors\bower_components\cropperjs\dist\cropper.min.css" />
+    <Content Include="Assets\vendors\bower_components\cropperjs\dist\cropper.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-buttons\js\buttons.flash.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-buttons\js\buttons.html5.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-buttons\js\buttons.print.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-responsive\css\responsive.dataTables.min.css" />
+    <Content Include="Assets\vendors\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Assets\vendors\bower_components\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="Assets\vendors\bower_components\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Assets\vendors\bower_components\dropify\dist\css\dropify.min.css" />
+    <Content Include="Assets\vendors\bower_components\dropify\dist\js\dropify.min.js" />
+    <Content Include="Assets\vendors\bower_components\dropzone\dist\dropzone.css" />
+    <Content Include="Assets\vendors\bower_components\dropzone\dist\dropzone.js" />
+    <Content Include="Assets\vendors\bower_components\editable-table\mindmup-editabletable.js" />
+    <Content Include="Assets\vendors\bower_components\editable-table\numeric-input-example.js" />
+    <Content Include="Assets\vendors\bower_components\eonasdan-bootstrap-datetimepicker\build\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Assets\vendors\bower_components\eonasdan-bootstrap-datetimepicker\build\css\datetimepicker.min.css" />
+    <Content Include="Assets\vendors\bower_components\eonasdan-bootstrap-datetimepicker\build\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets\vendors\bower_components\flot.tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="Assets\vendors\bower_components\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\excanvas.min.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.crosshair.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.pie.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.resize.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.stack.js" />
+    <Content Include="Assets\vendors\bower_components\Flot\jquery.flot.time.js" />
+    <Content Include="Assets\vendors\bower_components\FooTable\compiled\footable.bootstrap.min.css" />
+    <Content Include="Assets\vendors\bower_components\FooTable\compiled\footable.min.js" />
+    <Content Include="Assets\vendors\bower_components\fullcalendar\dist\fullcalendar.css" />
+    <Content Include="Assets\vendors\bower_components\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="Assets\vendors\bower_components\ion.rangeSlider\css\ion.rangeSlider.css" />
+    <Content Include="Assets\vendors\bower_components\ion.rangeSlider\css\ion.rangeSlider.skinModern.css" />
+    <Content Include="Assets\vendors\bower_components\ion.rangeSlider\js\ion.rangeSlider.min.js" />
+    <Content Include="Assets\vendors\bower_components\jasny-bootstrap\dist\css\jasny-bootstrap.min.css" />
+    <Content Include="Assets\vendors\bower_components\jasny-bootstrap\dist\js\jasny-bootstrap.min.js" />
+    <Content Include="Assets\vendors\bower_components\jquery-toast-plugin\dist\jquery.toast.min.css" />
+    <Content Include="Assets\vendors\bower_components\jquery-toast-plugin\dist\jquery.toast.min.js" />
+    <Content Include="Assets\vendors\bower_components\jquery-wizard.js\css\wizard.css" />
+    <Content Include="Assets\vendors\bower_components\jquery.counterup\jquery.counterup.min.js" />
+    <Content Include="Assets\vendors\bower_components\jquery.easy-pie-chart\dist\jquery.easypiechart.min.js" />
+    <Content Include="Assets\vendors\bower_components\jquery.steps\build\jquery.steps.min.js" />
+    <Content Include="Assets\vendors\bower_components\jquery.steps\demo\css\jquery.steps.css" />
+    <Content Include="Assets\vendors\bower_components\jquery\dist\jquery.js" />
+    <Content Include="Assets\vendors\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="Assets\vendors\bower_components\jsgrid\dist\jsgrid-theme.min.css" />
+    <Content Include="Assets\vendors\bower_components\jsgrid\dist\jsgrid.min.css" />
+    <Content Include="Assets\vendors\bower_components\jsgrid\dist\jsgrid.min.js" />
+    <Content Include="Assets\vendors\bower_components\jszip\dist\jszip.min.js" />
+    <Content Include="Assets\vendors\bower_components\mjolnic-bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Assets\vendors\bower_components\mjolnic-bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Assets\vendors\bower_components\mjolnic-bootstrap-colorpicker\dist\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Assets\vendors\bower_components\mjolnic-bootstrap-colorpicker\dist\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Assets\vendors\bower_components\mjolnic-bootstrap-colorpicker\dist\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Assets\vendors\bower_components\moment\min\moment-with-locales.min.js" />
+    <Content Include="Assets\vendors\bower_components\moment\min\moment.min.js" />
+    <Content Include="Assets\vendors\bower_components\morris.js\morris.css" />
+    <Content Include="Assets\vendors\bower_components\morris.js\morris.min.js" />
+    <Content Include="Assets\vendors\bower_components\multiselect\css\multi-select.css" />
+    <Content Include="Assets\vendors\bower_components\multiselect\js\jquery.multi-select.js" />
+    <Content Include="Assets\vendors\bower_components\nestable2\jquery.nestable.css" />
+    <Content Include="Assets\vendors\bower_components\nestable2\jquery.nestable.js" />
+    <Content Include="Assets\vendors\bower_components\owl.carousel\dist\assets\owl.carousel.min.css" />
+    <Content Include="Assets\vendors\bower_components\owl.carousel\dist\assets\owl.theme.default.min.css" />
+    <Content Include="Assets\vendors\bower_components\owl.carousel\dist\owl.carousel.min.js" />
+    <Content Include="Assets\vendors\bower_components\pdfmake\build\pdfmake.min.js" />
+    <Content Include="Assets\vendors\bower_components\pdfmake\build\vfs_fonts.js" />
+    <Content Include="Assets\vendors\bower_components\peity\jquery.peity.min.js" />
+    <Content Include="Assets\vendors\bower_components\raphael\raphael.min.js" />
+    <Content Include="Assets\vendors\bower_components\select2\dist\css\select2.min.css" />
+    <Content Include="Assets\vendors\bower_components\select2\dist\js\select2.full.min.js" />
+    <Content Include="Assets\vendors\bower_components\simpleWeather\jquery.simpleWeather.min.js" />
+    <Content Include="Assets\vendors\bower_components\summernote\dist\summernote.css" />
+    <Content Include="Assets\vendors\bower_components\summernote\dist\summernote.min.js" />
+    <Content Include="Assets\vendors\bower_components\sweetalert\dist\sweetalert.css" />
+    <Content Include="Assets\vendors\bower_components\sweetalert\dist\sweetalert.min.js" />
+    <Content Include="Assets\vendors\bower_components\switchery\dist\switchery.min.css" />
+    <Content Include="Assets\vendors\bower_components\switchery\dist\switchery.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\code\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\image\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\layer\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\link\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\media\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\print\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\save\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\table\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\template\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Assets\vendors\bower_components\tinymce\themes\inlite\theme.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\themes\modern\theme.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Assets\vendors\bower_components\tinymce\tinymce.min.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\bloodhound.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\bloodhound.min.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\typeahead.bundle.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\typeahead.bundle.min.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\typeahead.jquery.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\dist\typeahead.jquery.min.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\Gruntfile.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\karma.conf.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\bloodhound.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\lru_cache.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\options_parser.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\persistent_storage.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\prefetch.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\remote.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\search_index.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\tokenizers.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\transport.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\bloodhound\version.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\common\utils.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\dataset.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\default_menu.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\event_bus.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\event_emitter.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\highlight.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\input.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\menu.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\plugin.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\typeahead.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\src\typeahead\www.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\bloodhound_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\lru_cache_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\options_parser_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\persistent_storage_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\prefetch_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\remote_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\search_index_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\tokenizers_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\bloodhound\transport_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\fixtures\ajax_responses.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\fixtures\data.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\fixtures\html.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\helpers\typeahead_mocks.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\integration\test.html" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\integration\test.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\playground.html" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\dataset_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\default_results_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\event_bus_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\event_emitter_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\highlight_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\input_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\plugin_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\results_spec.js" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\typeahead\typeahead_spec.js" />
+    <Content Include="Assets\vendors\bower_components\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="Assets\vendors\bower_components\wysihtml5x\dist\wysihtml5x.min.js" />
+    <Content Include="Assets\vendors\bower_components\x-editable\dist\bootstrap3-editable\css\bootstrap-editable.css" />
+    <Content Include="Assets\vendors\bower_components\x-editable\dist\bootstrap3-editable\img\loading.gif" />
+    <Content Include="Assets\vendors\bower_components\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="Assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="Assets\vendors\jquery-ui.min.js" />
+    <Content Include="Assets\vendors\jquery.sparkline\dist\jquery.sparkline.min.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-in-mill.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Assets\vendors\vectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Assets\vendors\vectormap\jvectormap.custom.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Classes\Ques.cs" />
+    <Compile Include="Models\DisaseQuestion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disease.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Question.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Assets\.vs\Panel sample\config\applicationhost.config" />
+    <Content Include="Assets\.vs\slnx.sqlite" />
+    <Content Include="Assets\.vs\VSWorkspaceState.json" />
+    <Content Include="Assets\dist\css\fonts\mellatweb-isans.woff" />
+    <Content Include="Assets\dist\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Assets\dist\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Assets\dist\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Assets\dist\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <Content Include="Assets\dist\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Assets\dist\fonts\lg\lg.ttf" />
+    <Content Include="Assets\dist\fonts\lg\lg.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-arrows-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-arrows-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-arrows-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-arrows-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-elaboration-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-elaboration-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-elaboration-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-basic-elaboration-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-ecommerce-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-ecommerce-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-ecommerce-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-ecommerce-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-music-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-music-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-music-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-music-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-software-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-software-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-software-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-software-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-weather-10.eot" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-weather-10.ttf" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-weather-10.woff" />
+    <Content Include="Assets\dist\fonts\linea-icons\linea-weather-10d41d.eot" />
+    <Content Include="Assets\dist\fonts\material-design-iconic-font\Material-Design-Iconic-Font.eot" />
+    <Content Include="Assets\dist\fonts\material-design-iconic-font\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Assets\dist\fonts\material-design-iconic-font\Material-Design-Iconic-Font.woff" />
+    <Content Include="Assets\dist\fonts\material-design-iconic-font\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Assets\dist\fonts\pe-icon-7\Pe-icon-7-stroke.eot" />
+    <Content Include="Assets\dist\fonts\pe-icon-7\Pe-icon-7-stroke.ttf" />
+    <Content Include="Assets\dist\fonts\pe-icon-7\Pe-icon-7-stroke.woff" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Icons4c82.eot" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Icons4c82.ttf" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Icons4c82.woff" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Icons4c82.woff2" />
+    <Content Include="Assets\dist\fonts\simple-line-icons\Simple-Line-Iconsd41d.eot" />
+    <Content Include="Assets\dist\fonts\themify-icons\themify.eot" />
+    <Content Include="Assets\dist\fonts\themify-icons\themify.ttf" />
+    <Content Include="Assets\dist\fonts\themify-icons\themify.woff" />
+    <Content Include="Assets\src\scss\mixins.scss" />
+    <Content Include="Assets\src\scss\style-rtl.scss" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\alerts.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\badges.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\breadcrumbs.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\button-groups.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\buttons.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\carousel.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\close.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\code.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\component-animations.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\dropdowns.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\forms.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\glyphicons.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\grid.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\input-groups.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\jumbotron.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\labels.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\list-group.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\media.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\alerts.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\background-variant.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\border-radius.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\buttons.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\center-block.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\clearfix.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\forms.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\gradients.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\grid-framework.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\grid.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\hide-text.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\image.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\labels.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\list-group.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\nav-divider.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\nav-vertical-align.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\opacity.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\pagination.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\panels.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\progress-bar.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\reset-filter.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\reset-text.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\responsive-visibility.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\tab-focus.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\table-row.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\text-emphasis.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\text-overflow.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\mixins\vendor-prefixes.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\modals.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\navbar.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\navs.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\normalize.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\pager.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\pagination.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\panels.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\popovers.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\print.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\progress-bars.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\responsive-embed.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\responsive-utilities.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\scaffolding.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\tables.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\thumbnails.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\tooltip.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\type.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\utilities.less" />
+    <Content Include="Assets\vendors\bower_components\bootstrap\dist\css\less\wells.less" />
+    <Content Include="Assets\vendors\bower_components\bourbon\app\assets\stylesheets\addons\_prefixer.scss" />
+    <Content Include="Assets\vendors\bower_components\bourbon\app\assets\stylesheets\css3\_transition.scss" />
+    <Content Include="Assets\vendors\bower_components\dropify\dist\fonts\dropify.woff" />
+    <Content Include="Assets\vendors\bower_components\summernote\dist\font\summernote.woff" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Assets\vendors\bower_components\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\.bower.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\.gitignore" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\.jshintrc" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\.travis.yml" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\bower.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\CHANGELOG.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\composer.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\CONTRIBUTING.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\countries.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\post_1960.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\8.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\80.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\a.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ab.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\abo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\abou.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\about.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ag.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agre.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agree.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agreem.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agreeme.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agreemen.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\agreement.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\al.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\all.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\am.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ame.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\amer.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ameri.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\americ.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\america.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\american.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\an.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ap.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apar.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apart.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apartm.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apartme.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apartmen.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\apartment.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ar.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\aro.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\arou.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\aroun.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\around.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\b.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\be.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ben-h.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ben-hu.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ben-hur.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ben.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bes.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\best.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bou.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\boun.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bount.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bounty.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\br.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bri.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\brid.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bridg.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bridge.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\bro.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\broa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\broad.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\broadw.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\broadwa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\broadway.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\c.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ca.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\can%27t.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\can.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cas.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casab.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casabl.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casabla.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casablan.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casablanc.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\casablanca.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cav.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cava.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\caval.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cavalc.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cavalca.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cavalcad.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cavalcade.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ci.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cim.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cima.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cimar.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cimarr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cimarro.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\cimarron.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\d.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\da.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\day.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\days.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\e.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ea.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ear.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eart.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\earth.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\em.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\emi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\emil.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\emile.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\et.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ete.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eter.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\etern.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eterni.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eternit.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eternity.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ev.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\eve.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\f.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\fr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\fro.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\from.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\fron.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\front.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\g.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ge.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gen.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gent.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentl.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentle.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentlem.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentlema.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentleman%27s.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gentleman.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gig.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gigi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\go.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\goi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\goin.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\going.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gon.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gone.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gra.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gran.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\grand.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gre.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\grea.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\great.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\greate.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\greates.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\greatest.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\gree.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\green.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\h.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ha.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ham.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\haml.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hamle.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hamlet.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hap.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\happ.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\happe.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\happen.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\happene.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\happened.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\he.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\her.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\here.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ho.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hot.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hote.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\hotel.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\how.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\i.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\in.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\it.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\k.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ki.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\kin.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\king.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\kings.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\kw.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\kwa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\kwai.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\l.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\li.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\lif.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\life.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\liv.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\live.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\lives.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\lo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\los.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\lost.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\m.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ma.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mar.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mart.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\marty.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\me.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mel.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\melo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\melod.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\melody.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\men.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\min.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mini.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\miniv.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\minive.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\miniver.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mrs.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mu.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mut.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\muti.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mutin.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\mutiny.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\my.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\n.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ni.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\nig.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\nigh.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\night.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\o.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\of.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\on.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\one.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ou.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\our.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\p.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\pa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\par.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\pari.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\paris.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\q.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\qu.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\qui.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\quie.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\quiet.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\r.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\re.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\reb.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\rebe.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\rebec.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\rebecc.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\rebecca.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ri.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\riv.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\rive.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\river.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\s.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\sh.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\sho.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\show.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\t.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ta.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\tak.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\take.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\th.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\the.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\to.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\v.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\va.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\val.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\vall.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\valle.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\valley.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\w.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wa.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\was.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wat.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wate.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\water.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\waterf.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\waterfr.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\waterfro.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\waterfron.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\waterfront.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\way.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\we.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wee.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\week.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\weeke.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\weeken.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\weekend.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wes.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\west.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\weste.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wester.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\western.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\win.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wind.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wing.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wings.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wit.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\with.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\wor.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\worl.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\world.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\y.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ye.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\yea.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\year.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\years.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\yo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\you.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\z.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zi.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zie.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zieg.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ziegf.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ziegfe.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ziegfel.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\ziegfeld.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zo.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zol.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\films\queries\zola.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\nba.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\nfl.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\nhl.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\data\repos.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\doc\bloodhound.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\doc\jquery_typeahead.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\doc\migration\0.10.0.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\LICENSE" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\package.json" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\README.md" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\test\ci" />
+    <Content Include="Assets\vendors\bower_components\typeahead.js\typeahead.js.jquery.json" />
+    <None Include="packages.config" />
+    <Content Include="Views\Admin\MainPanel.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\.vs\Panel sample\v16\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59753</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44372/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

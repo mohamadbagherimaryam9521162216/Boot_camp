@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DrZinoV2ModelStoreContainer" CdmEntityContainer="DrZinoV2Entities">
+    <EntitySetMapping Name="DisaseQuestions">
+      <EntityTypeMapping TypeName="DrZinoV2Model.DisaseQuestion">
+        <MappingFragment StoreEntitySet="DisaseQuestions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases">
+      <EntityTypeMapping TypeName="DrZinoV2Model.Disease">
+        <MappingFragment StoreEntitySet="Diseases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ForSex" ColumnName="ForSex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="DrZinoV2Model.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
