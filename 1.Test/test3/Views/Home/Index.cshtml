@@ -1,0 +1,45 @@
+﻿@model test3.Models.login_1
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+       
+       <hr /> 
+       <form method="post" action="@Url.Action("input_")">
+           <fieldset>
+               <legend> <center> <h2> @ViewBag.message</h2> </center></legend>
+               <div>
+                   
+                       <label>username</label>
+                       <div>
+                           <input type="text" name="username" placeholder="Enter your username">
+                       </div>
+               </div>
+
+               <div>
+                   <label>password</label>
+                   <div>
+                       <input type="text" name="password" placeholder="Enter your password" />
+                   </div>
+               </div>
+
+               <div>
+                   <div>
+                       <input type="submit" value="Enter" />
+                   </div>
+               </div>
+
+           </fieldset>
+</form>
+    </div>
+</body>
+</html>

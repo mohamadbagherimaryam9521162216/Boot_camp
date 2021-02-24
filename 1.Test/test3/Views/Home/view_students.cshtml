@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>view_students</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="/profile">admin profile</a>
+    <br />
+    <a href="/exit">خروج</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>SID</th>
+            <th>FullName</th>
+            <th>Field</th>
+            <th>RTime</th>
+        </tr>
+        <hr />
+
+        <div>
+            @{
+                foreach (var item in Model)
+                {
+
+                    <tr>
+                        <th>@item.ID</th>
+                        <th>@item.StdID</th>
+                        <th>@item.name</th>
+                        <th>@item.Field</th>
+                        <th>@item.Rtime</th>
+                        <th>
+                            <a href="/remove/@item.ID">remove</a>
+                            @*@Html.ActionLink("remove",
+                                   "remove",
+                                   null,
+                                   new
+                                   {
+                                       id = @item.ID
+                                   }
+                                )*@
+                        </th>
+                        <th>
+                            <a href="/edit/@item.ID">edit</a>
+
+                            @*@Html.ActionLink("edit",
+                                   "edit",
+                                   null,
+                                   new
+                                   {
+                                       id = @item.ID
+                                   }
+                                )*@
+
+
+
+
+
+                        </th>
+                    </tr>
+                    <hr />
+                }
+
+
+
+            }
+        </div>
+    </table>
+</body>
+</html>

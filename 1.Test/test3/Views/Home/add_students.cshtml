@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>add_students</title>
+</head>
+<body>
+    <div>
+
+
+        <hr />
+        <form method="post" action="@Url.Action("add_")">
+            <fieldset>
+                <legend> <center> <h2> @ViewBag.message</h2> </center></legend>
+                <div>
+
+                    <label>شماره دانشجویی</label>
+                    <div>
+                        <input type="number" name="StdId" placeholder="شماره دانشجویی را وارد کنید">
+                    </div>
+                </div>
+
+              
+
+
+                <div>
+                    <label>نام و نام خانوادگی</label>
+                    <div>
+                        <input type="text" name="FullName" placeholder="نام و نام خانوادگی را وارد کنید" />
+                    </div>
+                </div>
+
+                <div>
+                    <label>رشته</label>
+                    <div>
+                        <input type="text" name="Field" placeholder="رشته دانشجو را وارد کنید" />
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <input type="submit" value="اضافه کردن دانشجو" />
+                    </div>
+                </div>
+
+            </fieldset>
+    </div>
+</body>
+</html>
+
+
