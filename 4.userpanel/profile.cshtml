@@ -1,0 +1,489 @@
+﻿@model NewDrZinoLanding.Classes.UserData
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>حساب کاربری</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/images/favicon.ico">
+
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Assets/css/vendor/bootstrap.min.css">
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="~/Assets/css/vendor/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="~/Assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Assets/css/vendor/themify-icons.css">
+    <link rel="stylesheet" href="~/Assets/css/vendor/cryptocurrency-icons.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="~/Assets/css/plugins/plugins.css">
+
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="~/Assets/css/helper.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+
+    <!-- Custom Style CSS Only For Demo Purpose -->
+    <link id="cus-style" rel="stylesheet" href="~/Assets/css/style-primary.css">
+
+</head>
+
+<body dir="rtl" class="skin-dark">
+
+    <div class="main-wrapper">
+
+
+        <!-- Header Section Start -->
+        <div class="header-section">
+            <div class="container-fluid">
+                <div class="row justify-content-between align-items-center">
+
+                    <!-- Header Logo (Header Left) Start -->
+                    <div class="header-logo col-auto">
+                        <a href="index.html">
+                            <img src="~/Assets/images/logo/logo.png" alt="">
+                            <img src="~/Assets/images/logo/logo-light.png" class="logo-light" alt="">
+                        </a>
+                    </div><!-- Header Logo (Header Left) End -->
+                    <!-- Header Right Start -->
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+
+                            <!-- Side Header Toggle & Search Start -->
+                            <div class="col-auto">
+                                <div class="row align-items-center">
+
+                                    <!--Side Header Toggle-->
+                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+
+                                    <!--Header Search-->
+                                    <div class="col-auto">
+
+                                        <div class="header-search">
+
+                                            <button class="header-search-open d-block d-xl-none"><i class="zmdi zmdi-search"></i></button>
+
+                                            <div class="header-search-form">
+                                                <form action="#">
+                                                    <input type="text" placeholder="جستجو کنید">
+                                                    <button><i class="zmdi zmdi-search"></i></button>
+                                                </form>
+                                                <button class="header-search-close d-block d-xl-none"><i class="zmdi zmdi-close"></i></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- Side Header Toggle & Search End -->
+                            <!-- Header Notifications Area Start -->
+                            <div class="col-auto">
+
+                                <ul class="header-notification-area">
+
+                                    <!--Mail-->
+                                    <li class="adomx-dropdown col-auto">
+                                        <a class="toggle" href="#"><i class="zmdi zmdi-email-open"></i><span class="badge"></span></a>
+
+                                        <!-- Dropdown -->
+                                        <div class="adomx-dropdown-menu dropdown-menu-mail">
+                                            <div class="head">
+                                                <h4 class="title">شما 0 ایمیل دارید.</h4>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                    <!--Notification-->
+                                    <li class="adomx-dropdown col-auto">
+                                        <a class="toggle" href="#"><i class="zmdi zmdi-notifications"></i><span class="badge"></span></a>
+
+                                        <!-- Dropdown -->
+                                        <div class="adomx-dropdown-menu dropdown-menu-notifications">
+                                            <div class="head">
+                                                <h5 class="title">شما 0 اعلان جدید دارید.</h5>
+                                            </div>
+                                            <div class="body custom-scroll">
+                                                @*<ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-notifications-none"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-block"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-info-outline"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-shield-security"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-notifications-none"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-block"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-info-outline"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-shield-security"></i>
+                                                                <p>تغییرات زیادی در صفحات وجود دارد.</p>
+                                                                <span>قبل ظهر 11:00   امروز</span>
+                                                            </a>
+                                                            <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
+                                                        </li>
+                                                    </ul>*@
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#" class="view-all">مشاهده همه</a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                    <!--User-->
+                                    <li class="adomx-dropdown col-auto">
+                                        <a class="toggle" href="#">
+                                            <span class="user">
+                                                <span class="avatar">
+                                                    <img src="~/Assets/images/avatar/avatar-1.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </span>
+                                                <span class="name">@ViewBag.FullName</span>
+                                            </span>
+                                        </a>
+
+                                        <!-- Dropdown -->
+                                        <div class="adomx-dropdown-menu dropdown-menu-user">
+                                            <div class="head">
+                                                <h5 class="name"><a href="#">@ViewBag.FullName</a></h5>
+                                                <a class="mail" href="#">@ViewBag.PhoneNumber</a>
+                                            </div>
+                                            <div class="body">
+                                                <ul>
+                                                    <li><a href="#"><i class="zmdi zmdi-account"></i>پروفایل</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#"><i class="zmdi zmdi-lock-open"></i>خروج</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="/order"><i class="zmdi zmdi-paypal"></i>پرداخت ها</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </div><!-- Header Notifications Area End -->
+
+                        </div>
+                    </div><!-- Header Right End -->
+
+                </div>
+            </div>
+        </div><!-- Header Section End -->
+        <!-- Side Header Start -->
+        @{Html.RenderAction("_RightSidebar");}
+        <!-- Content Body Start -->
+        <div class="content-body">
+            <div class="container">
+                @{Html.EnableClientValidation();}
+                @using (Html.BeginForm("Profile", "UserPanel", FormMethod.Post, new { @id = "Sub" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.Hidden("HiddenToken", (object)ViewBag.Token)
+                    <div class="row">
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                            <label class="control-label mb-10 text-right">قد</label>
+                            @Html.TextBoxFor(a => a.Height, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                            <label class="control-label mb-10 text-right">وزن</label>
+                            @Html.TextBoxFor(a => a.Weight, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                            <label class="control-label mb-10 text-right">دورکمر</label>
+                            @Html.TextBoxFor(a => a.Waist, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                            <label class="control-label mb-10 text-right">دورمچ</label>
+                            @Html.TextBoxFor(a => a.Wrist, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                            <label class="control-label mb-10 text-right">تاریخ تولد</label>
+                            @Html.TextBoxFor(a => a.Birthday, new { @class = "form-control", mask = "9999/99/99", placeholder = "1351/02/14" })
+                            <style>
+                                #Birthday {
+                                    direction: ltr;
+                                    text-align: left;
+                                }
+                            </style>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-4 align-self-center">
+                            <label class="control-label mb-10 text-right" style="display:block;">جنسیت</label>
+                            <div class="adomx-checkbox-radio-group inline">
+                                <label class="control-label mb-15 text-right adomx-radio-2">
+                                    @Html.RadioButtonFor(a => a.IsMan, true, new { @class = "form-control " })
+                                    <i class="icon"></i>
+                                    مرد
+                                </label>
+                                <label class="control-label mb-10 text-right  adomx-radio-2">
+                                    @Html.RadioButtonFor(a => a.IsMan, false, new { @class = "form-control " })
+                                    <i class="icon"></i>
+                                    زن
+                                </label>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">غذاهایی که آلرژی دارید!</label>
+                            @Html.TextAreaFor(a => a.AllergicFoods, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">غذاهایی که دوست ندارید!</label>
+                            @Html.TextAreaFor(a => a.DissLikeFoods, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">غذاهایی که دوست دارید!</label>
+                            @Html.TextAreaFor(a => a.FoodsLike, new { @class = "form-control " })
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">سابقه مصرف دارو و مکمل!</label>
+                            @Html.TextAreaFor(a => a.DrugHistory, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">سابقه جراحی!</label>
+                            @Html.TextAreaFor(a => a.SurgeryHistory, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">سابقه بیماری های مزمن در اقوام درجه یک!</label>
+                            @Html.TextAreaFor(a => a.IllnessRelatives, new { @class = "form-control " })
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">آیا  مشکل گوارشی یا ... دارید؟</label>
+                            @Html.TextAreaFor(a => a.HasDigestiveProblem, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-4 align-self-center ">
+                            <label class="control-label mb-15 text-right">آیا گیاهخوار هستید؟</label>
+                            <div class="adomx-checkbox-radio-group inline">
+                                <label class="control-label mb-10 text-right adomx-radio-2">
+                                    @Html.RadioButtonFor(a => a.IsVegetarian, true, new { @class = "form-control " })
+                                    <i class="icon"></i>
+                                    هستم
+                                </label>
+                                <label class="control-label mb-10 text-right adomx-radio-2">
+                                    @Html.RadioButtonFor(a => a.IsVegetarian, false, new { @class = "form-control " })
+                                    <i class="icon"></i>
+                                    نیستم
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label class="control-label mb-10 text-right">شغل</label>
+                            @Html.TextAreaFor(a => a.Job, new { @class = "form-control " })
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 align-self-center ">
+                            <div class="adomx-checkbox-radio-group inline">
+
+                                @foreach (var item in ViewBag.Diseases)
+                                {
+                                    <label class="adomx-checkbox">
+                                        <input class="checkbox" type="checkbox" id="Dis_@item.ID" onchange="Questions(this.id)">
+                                        <i class="icon"></i> @item.Title
+                                    </label>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="QuestionsAnswer" class="row mt-20" style="border:2px solid #8b8d9b; border-radius:5px;">
+
+                    </div>
+                    <input type="hidden" name="JsonQuestionsAns" id="JsonQuestionsAns" value="">
+                    <div class="row" style="margin-top: 20px;">
+                        <button class="button button-outline button-success" style="margin-right:15px;"><span>ثبت اطلاعات</span></button>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+        <!-- Content Body End -->
+        <!-- Footer Section Start -->
+        <div class="footer-section">
+            <div class="container-fluid">
+
+                <div class="footer-copyright text-center">
+                    <p class="text-body-light">تمامی حقوق سایت برای دکتر زینو محفوظ است. | 1399</p>
+                </div>
+
+            </div>
+        </div><!-- Footer Section End -->
+
+    </div>
+
+    <!-- JS
+    ============================================ -->
+    <!-- Global Vendor, plugins & Activation JS -->
+    <script src="~/Assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="~/Assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="~/Assets/js/vendor/popper.min.js"></script>
+    <script src="~/Assets/js/vendor/bootstrap.min.js"></script>
+    <!--Plugins JS-->
+    <script src="~/Assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/Assets/js/plugins/tippy4.min.js.js"></script>
+    <!--Main JS-->
+    <script src="~/Assets/js/main.js"></script>
+
+    <script src="~/Scripts/jquery.maskedinput.js"></script>
+    <script src="~/Scripts/jquery.maskedinput.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $('[mask]').each(function (e) {
+                $(this).mask($(this).attr('mask'));
+            });
+        });
+
+        function Questions(DisID) {
+            var id = parseInt(DisID.replace("Dis_", ""));
+            $(document).ready(function () {
+                $.post('/UserPanel/GetQuestion', { DiseaseID: id },
+                    function (data, status) {
+                        if (status == "success") {
+                            if (data != "") {
+                                var QuestionsList = JSON.parse(data);
+                                //console.log(QuestionsList);
+                                $.each(QuestionsList, function (index, value) {
+                                    if (document.getElementById(DisID).checked) {
+                                        var AppendHTML = '<div id=QuestionBody_' + value["ID"] + ' class="form-group col-lg-6 col-md-6 col-sm-12 align-self-center mt-3 mb-3"><label class="adomx-checkbox">' + value["Context"] + '</label><textarea onChange="PreEdit()" id=Answer_' + value["ID"] + ' class="form-control DisQuesAns" cols="20" name="DisQuesAnswers[]" rows="2"></textarea></div>';
+                                        $('#QuestionsAnswer').append(AppendHTML);
+                                    }
+                                    else {
+                                        $('#QuestionBody_' + value["ID"]).remove();
+                                    }
+                                });
+                            }
+                        }
+                    });
+            });
+        }
+
+        $(document).ready(function () {
+            $('#Sub').submit(function () {
+                var DQAns = document.getElementsByClassName("DisQuesAns");
+                console.log(DQAns.length);
+                var Datass = {};
+                $.each(DQAns, function (index, value) {
+                    Datass[value.id] = value.value;
+                    //var JsonDisQuesAns = JSON.stringify("key": value.id, "value": value.value);
+                    //console.log(value.value);
+                    //console.log(value.id);
+                });
+                var JsonDisQuesAns = JSON.stringify(Datass);
+                document.getElementById("JsonQuestionsAns").value = JsonDisQuesAns;
+            });
+        });
+
+        @*function InitialData() {
+            $(document).ready(function () {
+                //// Set Disease Checkbox
+                @foreach (var item in ViewBag.SelectedDiseases)
+                {
+                    <text>
+                        var @item.ID+"_CheckBox" = document.getElementById("Dis_" + @item.ID);
+                        @item.ID<text>_CheckBox.checked = true;</text>
+                    </text>
+                }
+                /////////////////////////
+
+                //// Set Disease Checkbox
+                @foreach (var item in ViewBag.DiseaseAnswers)
+                {
+                    <text>
+                        var AppendHTML_@item.ID = '<div id=QuestionBody_' + @item.ID + ' class="form-group col-lg-6 col-md-6 col-sm-12 align-self-center mt-3 mb-3"><label class="adomx-checkbox">' + @item.Context + '</label><textarea onChange="PreEdit()" id=Answer_' + @item.ID + ' class="form-control DisQuesAns" cols="20" name="DisQuesAnswers[]" rows="2"></textarea></div>';
+                        $('#QuestionsAnswer').append(AppendHTML_@item.ID);
+                    </text>
+                }
+                /////////////////////////
+            });
+        }*@
+
+        @Html.Raw(@ViewBag.SelectedDiseases)
+
+        $(document).ready(function () {
+            @Html.Raw(@ViewBag.DiseaseAnswersStr)
+        });
+
+    </script>
+</body>
+
+
+</html>
